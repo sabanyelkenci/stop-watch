@@ -1,128 +1,139 @@
 body {
-    margin: 0; // 1
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    font-weight: $font-weight-base;
-    line-height: $line-height-base;
-    color: $body-color;
-    text-align: left; // 3
-    background-color: $body-bg; // 2
-  }
+  margin: 0; // 1
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: left; // 3
+  background-color: $body-bg; // 2
+}
 
 header {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background: #007FFF;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: #007fff;
 }
 
 header img {
-    width: 130px;
+  width: 130px;
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-    display: block;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  display: block;
 }
 
 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .main-cont {
-    background: #FFF;
-    border-radius: 5px;
-    box-shadow: 0 35px 55px 0 rgb(0 0 0 / 5%);
-    margin-top: -54px;
-    padding-bottom: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 35px 55px 0 rgb(0 0 0 / 5%);
+  margin-top: -54px;
+  padding-bottom: 20px;
 }
 .tab-menu {
-    text-align: center;
-    border-bottom: 1px solid #EEE;
+  text-align: center;
+  border-bottom: 1px solid #eee;
 }
 
 .tab-menu .item {
-    display: inline-block;
-}   
+  display: inline-block;
+}
 .tab-menu .item a {
-    margin: 0 5px;
-    padding: 15px 30px;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 400;
-    color: #797F89;
-    transition: color 0.2s ease-in;
+  margin: 0 5px;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #797f89;
+  transition: color 0.2s ease-in;
 }
 
 .stopw-cont {
-    text-align: center;
-    padding-bottom: 70px;
+  text-align: center;
+  padding-bottom: 70px;
 }
 
 .stopw-cont .unit {
-    display: inline-block;
-    margin: 70px 15px;
+  display: inline-block;
+  margin: 80px 15px;
+  padding-left: 1em;
 }
 .stopw-cont .unit h2 {
-    display: inline-block;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 50px;
-    font-weight: 300;
-    color: #383E47;
+  display: inline-block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: #383e47;
+  padding-left: 50px;
 }
+
 .stopw-cont .unit label {
-    margin-left: 5px;
-    font-size: 15px;
-    color: #383E47;
+  margin-left: 5px;
+  font-size: 15px;
+  color: #383e47;
+}
+
+.btn-wrap {
+  display: block;
+}
+.btn {
+  background: #e5f2ff;
+  color: #007fff;
 }
 .laps {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .laps #laps-header {
-    font-size: 13px;
-    color: #797F89;
+  font-size: 13px;
+  color: #797f89;
 }
 
 label {
-    display: inline-block;
-    margin-bottom: .5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 /* layout footer */
 
 footer {
-    padding: 20px 0;
-    margin-top: 100px;
-    background: #FFF;
+  padding: 20px 0;
+  margin-top: 100px;
+  background: #fff;
 }
 
 footer .footer-logo {
-    display: inline-block;
+  display: inline-block;
 }
 
 footer .footer-logo img {
-    height: 35px;
+  height: 35px;
 }
 footer .footer-items {
-    display: inline-block;
-    float: right;
+  display: inline-block;
+  float: right;
 }
 
 footer .footer-items a {
-    color: #A3AAB2;
-    font-size: 14px;
-    text-decoration: underline;
-    margin-left: 25px;
+  color: #a3aab2;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-left: 25px;
 }
