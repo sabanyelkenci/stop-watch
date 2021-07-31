@@ -14,7 +14,7 @@ let displayHrs = 0;
 let status = "stopped";
 let interval = null;
 
-export const stopWatch = (e) => {
+export const stopWatch = () => {
   // let milSecond = setInterval(()=>{
   msec++;
   // console.log(msec);
@@ -83,25 +83,28 @@ export const startStop = () => {
 };
 
 export const reset = () => {
+  clearInterval(interval);
 
- window.clearInterval(interval);
+  msec = 0;
+  sec = 0;
+  min = 0;
+  hrs = 0;
 
-   msec = 0;
-   sec = 0;
-   min = 0;
-   hrs = 0;
+  displayMsec = 0;
+  displaySec = 0;
+  displayMin = 0;
+  displayHrs = 0;
 
-  document.getElementById("milliseconds").innerHTML = displayMsec;
-  document.getElementById("seconds").innerHTML = displaySec;
-  document.getElementById("minutes").innerHTML = displayMin;
-  document.getElementById("hours").innerHTML = displayHrs;
+  // msec = "0" + msec.toString();
+  // sec = "0" + sec.toString();
+  // min = "0" + min.toString();
+  // hrs = "0" + hrs.toString();
 
-  document.getElementById("startBtn").innerHTML= "Start";
+  document.getElementById("milliseconds").innerHTML = msec;
+  document.getElementById("seconds").innerHTML = sec;
+  document.getElementById("minutes").innerHTML = min;
+  document.getElementById("hours").innerHTML = hrs;
 
-  // document.getElementById("milliseconds").innerHTML = 00;
-  // document.getElementById("seconds").innerHTML = 00;
-  // document.getElementById("minutes").innerHTML = 00;
-  // document.getElementById("hours").innerHTML = 000;
-
-
+  document.getElementById("btnStart").innerHTML = "Start";
+  status = "stopped";
 };
