@@ -16,12 +16,12 @@ let interval = null;
 
 export const stopWatch = () => {
   // let milSecond = setInterval(()=>{
-  msec++;
+  msec += 10;
   // console.log(msec);
   // document
   //   .getElementById("milliseconds")
   //   .innerHTML= msec;
-  if (msec / 250 === 1) {
+  if (msec / 1000 === 1) {
     // clearInterval(milSecond);
     msec = 0;
     // console.log(msec);
@@ -39,10 +39,13 @@ export const stopWatch = () => {
       }
     }
 
-    // if(msec<10){
-
-    //   displayMsec = "0" + msec.toString();
-    // } else {displayMsec=msec}
+    if (msec < 10) {
+      displayMsec = "00" + msec.toString();
+    } else if (msec < 100) {
+      displayMsec = "0" + msec.toString();
+    } else {
+      displayMsec = msec;
+    }
 
     if (sec < 10) {
       displaySec = "0" + sec.toString();
