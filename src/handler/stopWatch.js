@@ -98,10 +98,6 @@ export const reset = () => {
   displayMin = 0;
   displayHrs = 0;
 
-  // msec = "0" + msec.toString();
-  // sec = "0" + sec.toString();
-  // min = "0" + min.toString();
-  // hrs = "0" + hrs.toString();
 
   document.getElementById("milliseconds").innerHTML = msec;
   document.getElementById("seconds").innerHTML = sec;
@@ -110,4 +106,13 @@ export const reset = () => {
 
   document.getElementById("btnStart").innerHTML = "Start";
   status = "stopped";
+
+ let listLaps = document.getElementById("laps-list");
+ let child = listLaps.lastElementChild;
+ while(child){
+  listLaps.removeChild(child);
+  child= listLaps.lastElementChild;
+ }
+ 
+
 };
