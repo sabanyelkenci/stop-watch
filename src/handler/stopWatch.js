@@ -1,5 +1,6 @@
 // import { button } from "../components/button.js";
 // import { btnListener } from "../listeners/listeners.js"
+import { data } from "../data/data.js";
 
 let msec = 0;
 let sec = 0;
@@ -12,11 +13,11 @@ let displayMin = 0;
 let displayHrs = 0;
 
 let status = "stopped";
-let interval = null;
+
 
 export const stopWatch = () => {
   // let milSecond = setInterval(()=>{
-  msec += 10;
+  msec += 1;
   // console.log(msec);
   // document
   //   .getElementById("milliseconds")
@@ -38,34 +39,38 @@ export const stopWatch = () => {
         hrs++;
       }
     }
-
-    if (msec < 10) {
-      displayMsec = "00" + msec.toString();
-    } else if (msec < 100) {
-      displayMsec = "0" + msec.toString();
-    } else {
-      displayMsec = msec;
-    }
-
-    if (sec < 10) {
-      displaySec = "0" + sec.toString();
-    } else {
-      displaySec = sec;
-    }
-
-    if (min < 10) {
-      displayMin = "0" + min.toString();
-    } else {
-      displayMin = min;
-    }
-
-    if (hrs < 10) {
-      displayHrs = "0" + hrs.toString();
-    } else {
-      displayHrs = hrs;
-    }
+    
   }
-  document.getElementById("milliseconds").innerHTML = msec;
+
+  if (msec < 10) {
+    displayMsec = "00" + msec.toString();
+  } else if (msec < 100) {
+    displayMsec = "0" + msec.toString();
+  } else {
+    displayMsec = msec;
+  }
+
+  if (sec < 10) {
+    displaySec = "0" + sec.toString();
+  } else {
+    displaySec = sec;
+  }
+
+  if (min < 10) {
+    displayMin = "0" + min.toString();
+  } else {
+    displayMin = min;
+  }
+
+  if (hrs < 10) {
+    displayHrs = "0" + hrs.toString();
+  } else {
+    displayHrs = hrs;
+  }
+
+
+
+  document.getElementById("milliseconds").innerHTML = displayMsec;
   document.getElementById("seconds").innerHTML = displaySec;
   document.getElementById("minutes").innerHTML = displayMin;
   document.getElementById("hours").innerHTML = displayHrs;
@@ -75,18 +80,18 @@ export const startStop = () => {
   if (status === "stopped") {
     console.log(status);
 
-    interval = window.setInterval(stopWatch, 0.001);
+    data.interval = window.setInterval(stopWatch,1);
     document.getElementById("btnStart").innerHTML = "Pauze";
     status = "started";
   } else {
-    window.clearInterval(interval);
+    window.clearInterval(data.interval);
     document.getElementById("btnStart").innerHTML = "Start";
     status = "stopped";
   }
 };
 
 export const reset = () => {
-  clearInterval(interval);
+  clearInterval(data.interval);
 
   msec = 0;
   sec = 0;

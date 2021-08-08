@@ -1,6 +1,7 @@
 import { data } from "../data/data.js";
 
-let count=0;
+data.count=0;
+
 
 export const addLap = (e) => {
     e.preventDefault();
@@ -35,12 +36,12 @@ console.log(data);
 //   }
 
   let addLi = document.createElement("li");
-  count++;
+  data.count++;
   addLi.className="laps-items";
   
 
 
-  addLi.innerHTML = `${count}.     ${data.hours} : ${data.minutes} : ${data.seconds} : ${data.miliseconds} `
+  addLi.innerHTML = `${data.count}.     ${data.hours} : ${data.minutes} : ${data.seconds} : ${data.miliseconds} `
 //   addLi.innerHTML= `"${count}" "${data.hours}" " : "${data.minutes} " : "${data.seconds} " : "${data.miliseconds} `
   
   ol.appendChild(addLi);
